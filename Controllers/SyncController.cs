@@ -52,7 +52,8 @@ namespace Future.Api.Controllers
             {
                 await Task.Delay(TimeSpan.FromSeconds(10));
                 await _syncService.Add(requestBody.Id, requestBody.Data);
-            }).Start();
+            })
+            .Start();
 
             return NoContent();
         }
